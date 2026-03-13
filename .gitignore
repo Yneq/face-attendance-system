@@ -1,0 +1,8 @@
+venv/
+__pycache__/
+*.pkl
+*.pyc
+.DS_Storedataset/
+attendance.csv
+dataset/
+attendance.csv
