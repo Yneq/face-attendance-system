@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Face Attendance</title>
+</head>
+
+<body>
+
+<h1>AI 人臉打卡系統</h1>
+
+<video id="video" width="640" height="480" autoplay></video>
+
+<br>
+
+<button id="snap">打卡</button>
+
+<canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+
+<h2 id="result"></h2>
+
+<script src="{{ url_for('static', filename='js/webcam.js') }}"></script>
+
+</body>
+</html>
