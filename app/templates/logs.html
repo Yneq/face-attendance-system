@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>打卡紀錄</title>
+</head>
+<body>
+
+<h1>📋 打卡紀錄</h1>
+
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <th>時間</th>
+    </tr>
+
+    {% for name, time in records %}
+    <tr>
+        <td>{{ name }}</td>
+        <td>{{ time }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<br>
+<a href="/">← 回首頁</a>
+
+</body>
+</html>
