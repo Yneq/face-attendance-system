@@ -18,7 +18,7 @@
 
 # 🧠 系統架構
 
-
+```text
 Browser (Webcam)
 ↓
 Flask API (/checkin)
@@ -28,13 +28,13 @@ Face Recognition
 PostgreSQL
 ↓
 回傳結果
-
+```
 
 ---
 
 # 📂 專案結構
 
-
+```
 face-attendance-system/
 ├── app/
 │ ├── main.py # Flask server
@@ -51,7 +51,7 @@ face-attendance-system/
 ├── encode_faces.py # 人臉 encoding
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
@@ -68,10 +68,8 @@ face-attendance-system/
 ---
 
 # 🛠 安裝與執行
-
-## 1️⃣ 建立虛擬環境
-
 ```bash
+1️⃣ 建立虛擬環境
 python3 -m venv venv
 source venv/bin/activate
 2️⃣ 安裝套件
@@ -118,85 +116,63 @@ python main.py
 打開瀏覽器：
 
 http://127.0.0.1:5000
-🧪 使用方式
-📸 打卡
+```
+
+# 🧪 使用方式
+# 📸 打卡
 
 點擊：
-
 📸 打卡
 
 流程：
-
 Webcam 拍照
-
 後端辨識人臉
-
 成功 → 寫入 PostgreSQL
 
-📋 查看打卡紀錄
+# 📋 查看打卡紀錄
 
 點擊：
-
 📋 查看打卡紀錄
-
 或直接訪問：
-
 /logs
-🔒 防重複打卡機制
+
+# 🔒 防重複打卡機制
 
 系統會檢查：
-
 同一個人 60 秒內只能打卡一次
-
 若重複打卡：
-
 ⚠️ 請勿重複打卡
-🧩 設計重點
+
+# 🧩 設計重點
 
 使用 Flask 作為 Web API
-
 使用 face_recognition 做人臉比對
-
 使用 PostgreSQL 持久化資料
-
 前後端透過 fetch API 溝通
-
 加入 business logic（防重複打卡）
 
-📊 專案價值
+# 📊 專案價值
 
 此專案展示：
-
 AI + Web + Database 整合能力
-
 REST API 設計
-
 前後端互動流程
-
 實務系統設計思維
 
-🔮 未來可升級方向
+# 🔮 未來可升級方向
 
 👤 員工註冊（上傳人臉）
-
 🐳 Docker 部署
-
 ☁️ 雲端部署（AWS / GCP）
-
 📊 打卡統計 dashboard
-
 🔐 登入驗證系統
-
 🎯 更準確的模型（InsightFace / ArcFace）
 
-⚠️ 注意事項
+# ⚠️ 注意事項
 
 dataset 不建議上傳到 GitHub
-
 本專案為 Demo，未處理安全與高併發
-
 Webcam 需使用 HTTPS（正式環境）
 
-✨ 作者
-
+# ✨ 作者
 Vance
