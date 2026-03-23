@@ -27,6 +27,8 @@ snap.onclick = function () {
       .then(data => {
         if (data.status === "success") {
           result.innerText = `打卡成功：${data.name}，時間：${data.time}`;
+        } else if (data.status === "duplicate") {
+            result.innerText = `⚠️ ${data.name}，請勿重複打卡（60秒內）`;
         } else {
           result.innerText = "辨識失敗，查無此人";
         }

@@ -1,7 +1,7 @@
 import face_recognition
 import os
 from datetime import datetime
-from db import insert_attendance
+from db import insert_attendance, is_recently_checked_in
 
 known_face_encodings = []
 known_face_names = []
@@ -34,6 +34,14 @@ def recognize_face(img_file):
         if True in matches:
             index = matches.index(True)
             name = known_face_names[index]
+
+            # 防止重複打卡
+            if is_recently_checked_in(name):
+                return {
+                    "name": name,
+                    "time": None,
+                    "status": "duplicate"
+                }
 
             insert_attendance(name)
 
