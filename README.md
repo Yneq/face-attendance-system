@@ -125,53 +125,53 @@ http://127.0.0.1:5000
 📸 打卡
 
 流程：
-Webcam 拍照
-後端辨識人臉
+Webcam 拍照  
+後端辨識人臉  
 成功 → 寫入 PostgreSQL
 
 # 📋 查看打卡紀錄
 
-點擊：
-📋 查看打卡紀錄
-或直接訪問：
+點擊：  
+📋 查看打卡紀錄  
+或直接訪問：  
 /logs
 
 # 🔒 防重複打卡機制
 
-系統會檢查：
-同一個人 60 秒內只能打卡一次
-若重複打卡：
+系統會檢查：  
+同一個人 60 秒內只能打卡一次  
+若重複打卡：  
 ⚠️ 請勿重複打卡
 
 # 🧩 設計重點
 
-使用 Flask 作為 Web API
-使用 face_recognition 做人臉比對
-使用 PostgreSQL 持久化資料
-前後端透過 fetch API 溝通
+使用 Flask 作為 Web API  
+使用 face_recognition 做人臉比對  
+使用 PostgreSQL 持久化資料  
+前後端透過 fetch API 溝通  
 加入 business logic（防重複打卡）
 
 # 📊 專案價值
 
-此專案展示：
-AI + Web + Database 整合能力
-REST API 設計
-前後端互動流程
+此專案展示：  
+AI + Web + Database 整合能力  
+REST API 設計  
+前後端互動流程  
 實務系統設計思維
 
 # 🔮 未來可升級方向
 
-👤 員工註冊（上傳人臉）
-🐳 Docker 部署
-☁️ 雲端部署（AWS / GCP）
-📊 打卡統計 dashboard
-🔐 登入驗證系統
-🎯 更準確的模型（InsightFace / ArcFace）
+👤 員工註冊（上傳人臉） 
+🐳 Docker 部署  
+☁️ 雲端部署（AWS / GCP）  
+📊 打卡統計 dashboard  
+🔐 登入驗證系統  
+🎯 更準確的模型（InsightFace / ArcFace
 
 # ⚠️ 注意事項
 
-dataset 不建議上傳到 GitHub
-本專案為 Demo，未處理安全與高併發
+dataset 不建議上傳到 GitHub  
+本專案為 Demo，未處理安全與高併發  
 Webcam 需使用 HTTPS（正式環境）
 
 # ✨ 作者
